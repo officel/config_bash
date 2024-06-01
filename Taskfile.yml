@@ -1,0 +1,23 @@
+# https://taskfile.dev/
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task -h
+      - task --list-all
+
+  aqua-update:
+    desc: Run aqua update, install, list
+    aliases:
+      - a
+    dir: ~/.config/aqua
+    dotenv:
+      - .env
+    cmds:
+      - echo "use github token [${GITHUB_TOKEN:0:20}***]"
+      - aqua update
+      - aqua install -all
+      - aqua list --installed --all | sort
+
