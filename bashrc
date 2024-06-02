@@ -117,10 +117,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# 2024-04-26 
+# 2024-04-26
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# 2024-04-28 aqua
+# cli version manager aqua
 export PATH="$(aqua root-dir)/bin:$PATH"
 export AQUA_GLOBAL_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
 
@@ -135,4 +135,3 @@ eval "$(direnv hook bash)"
 
 # 2024-05-24 rye
 . "$HOME/.rye/env"
-
