@@ -152,3 +152,6 @@ source <(kubectl completion bash)
 
 complete -F _complete_alias k
 complete -F _complete_alias g
+
+# 2024-06-05 krew for kubectl
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
