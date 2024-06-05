@@ -135,3 +135,20 @@ eval "$(direnv hook bash)"
 
 # 2024-05-24 rye
 . "$HOME/.rye/env"
+
+# completion
+complete -C aws_completer aws
+complete -C terraform terraform
+complete -C terraform t
+source <(kubectl completion bash)
+
+# 2024-06-05 https://github.com/cykerway/complete-alias
+# brew install bash-completion@2
+# wget  https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias
+# chmod +x complete_alias
+# sudo mv complete_alias /usr/local/bin/
+[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
+. /usr/local/bin/complete_alias
+
+complete -F _complete_alias k
+complete -F _complete_alias g
