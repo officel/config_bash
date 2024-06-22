@@ -20,7 +20,6 @@ alias aqgi='aqua generate -i -o $AQUA_GLOBAL_CONFIG'
 alias aqia='aqua install --all'
 alias aqli='aqua list --installed --all | sort'
 alias aqup='aqua update'
-alias taskga='task -g a'
 
 # ansible
 alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
