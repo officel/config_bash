@@ -8,16 +8,8 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -155,3 +147,10 @@ complete -F _complete_alias g
 
 # 2024-06-05 krew for kubectl
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# 2024-07-28 history
+export HISTCONTROL=ignoreboth
+export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+export HISTSIZE=1000
+export HISTFILESIZE=2000
