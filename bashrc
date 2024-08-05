@@ -154,3 +154,10 @@ export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export HISTSIZE=1000
 export HISTFILESIZE=2000
+
+# 2024-08-06 clip
+# https://qiita.com/tawara_/items/0916eaec6ad09fce86a5
+function clip() {
+  { printf "\xff\xfe"; iconv -t UTF-16LE; } | clip.exe
+}
+
