@@ -161,3 +161,6 @@ function clip() {
   { printf "\xff\xfe"; iconv -t UTF-16LE; } | clip.exe
 }
 
+# 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
+source $HOME/.cargo/env
+
