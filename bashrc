@@ -125,8 +125,8 @@ fi
 # 2024-05-21 direnv
 eval "$(direnv hook bash)"
 
-# 2024-05-24 rye
-. "$HOME/.rye/env"
+# # 2024-05-24 rye
+# . "$HOME/.rye/env"
 
 # completion
 complete -C aws_completer aws
@@ -163,4 +163,7 @@ function clip() {
 
 # 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
 source $HOME/.cargo/env
+
+# uv
+export PATH="$HOME/.local/bin:$PATH"
 
