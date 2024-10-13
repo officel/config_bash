@@ -44,3 +44,10 @@ kubectl krew upgrade
   ./"${KREW}" install krew
 )
 ```
+
+bashrc に path を追加（以前 aqua でインストールした時に処理済）
+
+```txt:.bashrc
+# 2024-06-05 krew for kubectl
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+```
