@@ -167,3 +167,7 @@ source $HOME/.cargo/env
 # uv
 export PATH="$HOME/.local/bin:$PATH"
 
+# stern install from krew
+# https://github.com/stern/stern?tab=readme-ov-file#completion
+source <(kubectl stern --completion bash)
+complete -o default -F __start_stern kubectl stern

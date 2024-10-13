@@ -93,8 +93,9 @@ alias gss='git show --stat'
 alias gst='git status --short --branch'
 alias cr='cd "$(git rev-parse --show-toplevel)"'
 
-# k8s
-alias k='kubectl'
+# k8s use kubecolor
+alias k='kubecolor'
+alias kubectl='kubecolor'
 alias ka='kubectl apply'
 alias kd='kubectl describe'
 alias kdel='kubectl delete'
@@ -107,8 +108,7 @@ alias kgpa='kubectl get pod -A'
 alias kgtn='kubectl get node -o wide; kubectl top node'
 alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
 
-# make
-alias m='make'
+alias stern='kubectl stern'
 
 # terraform
 alias t='terraform'
