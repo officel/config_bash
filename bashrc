@@ -15,6 +15,9 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# use !!
+shopt -s histverify
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -142,7 +145,7 @@ source <(kubectl completion bash)
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 . /usr/local/bin/complete_alias
 
-complete -F _complete_alias k
+# complete -F _complete_alias k
 complete -F _complete_alias g
 
 # 2024-06-05 krew for kubectl
@@ -171,3 +174,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # https://github.com/stern/stern?tab=readme-ov-file#completion
 source <(kubectl stern --completion bash)
 complete -o default -F __start_stern kubectl stern
+
+# volta
+export PATH="$HOME/.volta/bin:$PATH"
