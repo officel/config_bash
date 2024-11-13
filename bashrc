@@ -153,7 +153,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # 2024-07-28 history
 export HISTCONTROL=ignoreboth
-export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:
+export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:task:gr:gst:gau:
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export HISTSIZE=1000
 export HISTFILESIZE=2000
