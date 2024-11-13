@@ -1,7 +1,7 @@
 # .dotfiles/alias
 
 # command
-alias ls='LANG=C ls --group-directories-first'
+alias ls='ls --group-directories-first'
 alias ll='ls -l'
 alias lla='ls -al'
 alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform"'
