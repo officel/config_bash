@@ -177,3 +177,6 @@ complete -o default -F __start_stern kubectl stern
 
 # volta
 export PATH="$HOME/.volta/bin:$PATH"
+
+# GOPATH
+export PATH="$HOME/go/bin:$PATH"
