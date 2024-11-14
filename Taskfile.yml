@@ -5,70 +5,20 @@ version: '3'
 
 tasks:
   default:
-    cmd: task --list
-    silent: true
-    # desc を空、silent: true 、 task --list でデフォルトの表示をクリーンにした
-
-  test:
-    desc: test tasks
-    aliases:
-      - "t"
-    cmds:
-      - task: test_vars_sh
-      - task: test_variables
-
-  test_vars_sh:
-    # desc を書かない代わりに summary は書くようにしたい
+    # desc: を書かないことで自分を一覧に出力しない
     summary: |
-      about vars with shell commands.
-      let's check title and outputs.
-    vars:
-      _d1: $(date -I)
-      _d2:
-        sh: date -I
-      _d3: date -I
-    cmds:
-      - "# タイトルにコマンドを表示したい時"
-      - echo "vars._d1:" "{{._d1}}"
-      - "# そのまま表示したい時はシングルクォーテーションで囲む"
-      - echo "vars._d1:" '{{._d1}}'
-
-      - "# タイトルにコマンドの結果を表示したい時"
-      - echo "vars._d2:" "{{._d2}}"
-      - "# 処理済の文字列が入っているのでシングルクォーテーションで囲っても同じ"
-      - echo "vars._d2:" '{{._d2}}'
-
-      - "# ただの文字列"
-      - echo "vars._d3:" "{{._d3}}"
-      - "# ただの文字列を評価すれば結果が得られる"
-      - echo "vars._d3:" "$({{._d3}})"
-    # internal: true にしないことで --list では非表示だけど叩けるタスクにする
-
-  test_variables:
-    desc: test variables
+      デフォルトでタスクの一覧出力
+    cmd: task --list --sort alphanumeric
+    silent: true
     aliases:
-      - tv
-    vars:
-      INT: 10
-      FLOAT: 3.14
-      ARRAY:
-        - 1
-        - 2
-        - 3
-      LIST:
-        - A
-        - B
-        - C
-      STRING: "日本語"
-      RESULT: $(date -I)
-    cmds:
-      - echo {{add .INT .FLOAT}}
-      - echo {{range .ARRAY}}{{.}}{{end}}
-      - for:
-          var: ARRAY
-        cmd: echo "in " {{.ITEM}}
-      - echo {{range .LIST}}{{.}}{{end}}
-      - for:
-          var: LIST
-        cmd: echo "LIST has " {{.ITEM}}
-        # LIST と ARRAY の違いとは
+      - ls
+
+  summary:
+    desc: view summary of all tasks
+    summary: |
+      全タスクのサマリー出力
+    aliases:
+      - la
+    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
+    silent: true
+    dir: '{{.USER_WORKING_DIR}}'
