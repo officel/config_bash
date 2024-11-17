@@ -110,15 +110,18 @@ alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
 
 alias stern='kubectl stern'
 
+# taskfile.dev
+alias t=`task`
+
 # terraform
-alias t='terraform'
-alias ta='terraform apply'
-alias te='terraform init --upgrade && terraform fmt && terraform plan'
-alias tf='terraform fmt'
-alias ti='terraform init'
-alias tiu='terraform init --upgrade'
-alias tir='terraform init -reconfigure'
-alias to='terraform output'
-alias tp='terraform plan'
-alias ts='terraform state'
-alias tv='terraform version'
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfe='terraform init --upgrade && terraform fmt && terraform plan'
+alias tff='terraform fmt'
+alias tfi='terraform init'
+alias tfiu='terraform init --upgrade'
+alias tfir='terraform init -reconfigure'
+alias tfo='terraform output'
+alias tfp='terraform plan'
+alias tfs='terraform state'
+alias tfv='terraform version'
