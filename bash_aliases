@@ -111,7 +111,7 @@ alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
 alias stern='kubectl stern'
 
 # taskfile.dev
-alias t=`task`
+alias t='task'
 
 # terraform
 alias tf='terraform'
