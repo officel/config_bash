@@ -134,7 +134,7 @@ eval "$(direnv hook bash)"
 # completion
 complete -C aws_completer aws
 complete -C terraform terraform
-complete -C terraform t
+complete -C terraform tf
 source <(kubectl completion bash)
 
 # 2024-06-05 https://github.com/cykerway/complete-alias
