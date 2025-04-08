@@ -67,7 +67,9 @@ alias jekyll='docker container run -itd --rm -v `pwd`:/srv/jekyll:Z -e "TZ=Asia/
 
 alias dc='docker compose'
 alias dcd='docker compose down'
-alias dcu='docker compose up -d'
+alias dcu='docker compose up'
+alias dcud='docker compose up -d'
+alias dcr='docker compose run'
 
 # git
 alias g='git'
