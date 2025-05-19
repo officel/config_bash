@@ -73,8 +73,8 @@ alias dcr='docker compose run'
 
 # git
 alias g='git'
-alias ga='git add ":!\!\!*"'  # :! は除外設定。 !! で始まるファイルを add しない
-alias gau='git add -u ":!\!\!*"'
+alias ga='git add ":!**\!\!*"'  # :! は除外設定。 !! で始まるファイルを add しない
+alias gau='git add -u ":!**\!\!*"'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gcan='git commit --amend --no-edit'
