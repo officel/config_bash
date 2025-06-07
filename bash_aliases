@@ -4,7 +4,7 @@
 alias ls='ls --group-directories-first'
 alias ll='ls -l'
 alias lla='ls -al'
-alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform"'
+alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform|.ruff_cache"'
 alias myip='curl -s inet-ip.info'
 alias mypath='echo $PATH | tr ":" "\n"'
 alias diff='diff --exclude=.terraform --exclude=.git'
