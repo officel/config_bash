@@ -23,7 +23,7 @@ Ubuntu 24.04 LTS がリリースされて WSL2 でも利用可能になったの
 
 ### XDG Bace にするために
 
-- $HOME 下の .bash* は削除。 .profile も削除
+- $HOME 下の .bash\* は削除。 .profile も削除
 - bash の読み込みを XDG Base にする sh を処理させる
 
 ```bash
@@ -34,7 +34,7 @@ sudo ln -s /home/raki/officel/config_bash/etc_profile.d_bash_xdg.sh bash_xdg.sh
 
 ### direnv でディレクトリ毎に alias
 
-- [direnvを使用して、同名のコマンドの挙動をディレクトリ毎に変更したい - eidera log](https://eidera.com/blog/2018/12/28/direnv_alias/)
+- [direnv を使用して、同名のコマンドの挙動をディレクトリ毎に変更したい - eidera log](https://eidera.com/blog/2018/12/28/direnv_alias/)
 
 ```bash
 cd
@@ -55,3 +55,4 @@ ln -s .config/bash/Taskfile.yml
 - [officel/config_aqua: .config/aqua](https://github.com/officel/config_aqua)
 - [officel/config_bash: .config/bash](https://github.com/officel/config_bash)
 - [officel/config_git: .config/git](https://github.com/officel/config_git)
+- [officel/config_task: .config/task](https://github.com/officel/config_task)
