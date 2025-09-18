@@ -21,7 +21,7 @@ Ubuntu 24.04 LTS がリリースされて WSL2 でも利用可能になったの
 
 ## note
 
-### XDG Bace にするために
+### XDG Base にするために
 
 - $HOME 下の .bash\* は削除。 .profile も削除
 - bash の読み込みを XDG Base にする sh を処理させる
@@ -39,15 +39,6 @@ sudo ln -s /home/raki/officel/config_bash/etc_profile.d_bash_xdg.sh bash_xdg.sh
 ```bash
 cd
 ln -s .config/bash/direnvrc .direnvrc
-```
-
-### user global な taskfile を配置
-
-- [Task](https://taskfile.dev/)
-
-```bash
-cd
-ln -s .config/bash/Taskfile.yml
 ```
 
 # related my projects
