@@ -117,6 +117,7 @@ alias stern='kubectl stern'
 
 # taskfile.dev
 alias t='task'
+alias tg='task --global'
 
 # terraform
 alias tf='terraform'
@@ -128,5 +129,7 @@ alias tfiu='terraform init --upgrade'
 alias tfir='terraform init -reconfigure'
 alias tfo='terraform output'
 alias tfp='terraform plan'
+alias tfq='terraform query'
 alias tfs='terraform state'
 alias tfv='terraform version'
+alias tfva='terraform validate'
