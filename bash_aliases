@@ -98,6 +98,11 @@ alias gss='git show --stat'
 alias gst='git status --short --branch'
 alias cr='cd "$(git rev-parse --show-toplevel)"'
 
+# GitHub Copilot
+alias ghc='gh copilot'
+alias ghcs='gh copilot suggest'
+alias ghce='gh copilot explain'
+
 # k8s use kubecolor
 alias k='kubecolor'
 alias kubectl='kubecolor'
