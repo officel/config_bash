@@ -127,6 +127,10 @@ alias tg='task --global'
 # terraform
 alias tf='terraform'
 alias tfa='terraform apply'
+# terraform-docs -c .terraform-docs.yml .
+# のように使うんだけど、設定ファイルはリポジトリによって異なるので名前だけ alias にする
+alias tfdocs='terraform-docs'
+# terraform destroy (tfd) は頻繁に叩かないし叩くべきでもないので alias にしないことにしている
 alias tfe='terraform init --upgrade && terraform fmt && terraform plan'
 alias tff='terraform fmt'
 alias tfi='terraform init'
