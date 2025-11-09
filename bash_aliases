@@ -8,6 +8,7 @@ alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform|.ruff_cach
 alias myip='curl -s inet-ip.info'
 alias mypath='echo $PATH | tr ":" "\n"'
 alias diff='diff --exclude=.terraform --exclude=.git'
+alias diffs='diff -y --suppress-common-lines'
 alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
 alias curlh='curl -D - -s -o /dev/null -sSL'
 alias pwgen='pwgen -c -n -B -1'
