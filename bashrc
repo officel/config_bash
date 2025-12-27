@@ -183,3 +183,6 @@ export PATH="$HOME/.volta/bin:$PATH"
 
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
+
+# cd alternative zoxide
+eval "$(zoxide init bash)"
