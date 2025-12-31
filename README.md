@@ -1,5 +1,8 @@
 # config_bash
 
+>[!IMPORTANT]
+> dotfiles の式年遷宮に伴い移動しました。[移動先はこちら](https://github.com/officel/dotfiles/)
+
 My bash config with XDG Base Directory specification. [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 
 ## motivation
